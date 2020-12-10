@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Result</title>
+</head>
+<body id='grad'>
+  <div class="container">
+  <h1>
+  <div class=""></div> {{ result }} </div>
+  </h1>
+<div>
+  <form action="{{ url_for('predict')}}" method="post">
+</body>
+</html>
+</div>
+<style>
+ #grad {
+        background: linear-gradient(to right, #0099ff 10%, #ff0066 90%);
+        background-position: center;
+        text-align: center;
+        padding: 0px;
+        font-family:Impact;
+        }
+
+
+  .container{
+    background-color:#0e9cee28;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    padding: 42px 55px 45px 55px;
+    display: inline-block;
+    margin: 45px;
+    overflow: hidden;
+    
+    border-radius: 20px;
+
+}
+</style>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    
+    <body id='grad'>
+        <div class="container">
+        <h1>
+        Helllo!people 
+          </h1>
+    <div>
+        <form action="{{ url_for('predict')}}" method="post">
+        <div>
+        <input id="Fuel_list" name="Year" type="number " placeholder="YEAR" > 
+        </div>
+        <div>
+        <input id="Fuel_list" name="Volume" required="required" placeholder="What is the volume "> 
+        </div>
+        
+        <div>
+        <select name="Fuel_Type" id="Fuel_list" required="required">
+                    <option value="Fuel_Type">What Is the Fuel type?</option> 
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                </select>
+        </div>
+        
+        <div>
+            <select name="condition" id="Fuel_list" required="required">
+                <option value="condition">Condition</option>
+                <option  value="with mileage">with mileage</option>
+                <option value="without mileage">without mileage</option>
+            </select>
+            </div>
+            <div>
+            <select name="Transmission_Mannual" id="Fuel_list" required="required">
+                <option value="condition">Transmission Type</option>
+                <option value="Mechanic">Mechanics Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select>
+            </div>
+            <div>
+            <button id="Fuel_list" type="submit"><span>Calculate the Selling Price</span></button>
+            </div>
+            <div>
+                <button id="Fuel_list" type="submit"><a href="https://prod-apnortheast-a.online.tableau.com/t/analyticsdatabuisness/views/smritijain/Dashboard1/dinesh.19mcal035@jecrcu.edu.in/smriti?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link">dashboard</a></button>
+
+            </div>
+        </div>
+</body>
+</html>
+</form>
+</div>
+
+<style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+.container{
+    background-color:#ffffff;
+    width: auto;
+    
+    
+    text-align: center;
+    align-items: center;
+    padding: 42px 55px 45px 55px;
+    display: inline-block;
+    margin: auto;
+    overflow: hidden;
+    
+    border-radius: 10px;
+
+}
+       
+ #grad {
+        background: linear-gradient(to right, #0099ff 10%, #ff0066 90%);
+        background-position: center;
+        text-align: center;
+        padding: 0px;
+        font-family:Impact;
+        }
+#Fuel_list{
+            border-radius: 24px;
+            width: 275px;
+            height: 60px;
+            font-size: 17px;
+            text-align: center;
+            margin: 30px 0px 15px 0px;
+            font-family: cursive;
+            font:100;
+            color:black;   
+            letter-spacing: 0.5px;
+            outline: none;
+            padding: 15px;
+            box-sizing: border-box;
+            
+}
+        
+#a{
+            text-decoration: none;
+        }
+#Fuel_type a:hover{
+            color: #ffffff;
+        }
+#Fuel_type span:hover{
+            color:lightslategrey;
+        }
+        
+</style>
+</body>
+
+</html>
