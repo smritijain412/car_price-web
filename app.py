@@ -10,25 +10,26 @@ def Home():
 @app.route("/predict", methods=['POST'])
 def predict():
     if request.method == 'POST':
-
-        Year = int(request.form['Year'])
+#1
+        Year = int(request.form['Year'])                
+#2
         Volume=float(request.form['Volume'])
+    #3
+        Mileage=float(request.form['Mileage'])
+#4
         Fuel_Type=request.form['Fuel_Type']
         if(Fuel_Type=='Petrol'):
                 Fuel_Type=0
         else:
             Fuel_Type=1
-        condition=request.form['condition']
-        if(condition=='with mileage'):
-            condition=1
-        else:
-            condition=0
+    #5
         Transmission_Mannual=request.form['Transmission_Mannual']
         if(Transmission_Mannual=='Mechanic'):
             Transmission_Mannual=0
         else:
             Transmission_Mannual=1
-        prediction=model.predict([[Year,Volume,Fuel_Type,condition,Transmission_Mannual]])
+
+        prediction=model.predict([[Year,Volume,Mileage,Fuel_Type,Transmission_Mannual]])
         output=round(prediction[0])
         if output<0:
             return render_template('index.html',prediction_texts="Sorry you cannot sell this car")
