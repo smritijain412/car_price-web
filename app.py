@@ -3,7 +3,7 @@ import jsonify
 import requests
 import pickle
 app = Flask(__name__)  
-model = pickle.load(open('models.pkl', 'rb'))
+model = pickle.load(open('model1.pkl', 'rb'))
 @app.route('/',methods=['GET'])
 def Home():
     return render_template('index.html')
@@ -29,7 +29,7 @@ def predict():
         else:
             Transmission_Mannual=1
 
-        prediction=model.predict([[Year,Volume,Mileage,Fuel_Type,Transmission_Mannual]])
+        prediction=model.predict([[Year,Mileage,Fuel_Type,Volume,Transmission_Mannual]])
         output=round(prediction[0])
         if output<0:
             return render_template('index.html',prediction_texts="Sorry you cannot sell this car")
