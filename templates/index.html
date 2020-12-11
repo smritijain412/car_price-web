@@ -15,11 +15,15 @@
           </h1>
     <div>
         <form action="{{ url_for('predict')}}" method="post">
-        <div>
-        <input id="Fuel_list" name="Year" type="number " placeholder="YEAR" > 
+
+        <input id="Fuel_list" name="Year" required="required"  placeholder="YEAR" type="number" > 
         </div>
         <div>
-        <input id="Fuel_list" name="Volume" required="required" placeholder="What is the volume "> 
+            <input id="Fuel_list" name="Mileage" required='required' placeholder="mileage"  > 
+
+        </div>
+        <div>
+        <input id="Fuel_list" name="Volume" required="required" placeholder="volume"  > 
         </div>
         
         <div>
@@ -29,26 +33,18 @@
                     <option value="Diesel">Diesel</option>
                 </select>
         </div>
-        
-        <div>
-            <select name="condition" id="Fuel_list" required="required">
-                <option value="condition">Condition</option>
-                <option  value="with mileage">with mileage</option>
-                <option value="without mileage">without mileage</option>
-            </select>
-            </div>
-            <div>
+    <div>
             <select name="Transmission_Mannual" id="Fuel_list" required="required">
-                <option value="condition">Transmission Type</option>
+                <option value="Transmission">Transmission Type</option>
                 <option value="Mechanic">Mechanics Car</option>
                 <option value="Automatic">Automatic Car</option>
             </select>
             </div>
             <div>
-            <button id="Fuel_list" type="submit"><span>Calculate the Selling Price</span></button>
+            <button id="First" type="submit" ><span>Calculate the Selling Price</span></button>
             </div>
             <div>
-                <button id="Fuel_list" type="submit"><a href="https://prod-apnortheast-a.online.tableau.com/t/analyticsdatabuisness/views/smritijain/Dashboard1/dinesh.19mcal035@jecrcu.edu.in/smriti?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link">dashboard</a></button>
+                <button id="Fuel_list" type="submit"><a href="https://prod-apnortheast-a.online.tableau.com/t/analyticsdatabuisness/views/smritijain/Dashboard1/dinesh.19mcal035@jecrcu.edu.in/smriti?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link">Dashboard</a></button>
 
             </div>
         </div>
@@ -56,6 +52,8 @@
 </html>
 </form>
 </div>
+
+
 
 <style>
         
@@ -80,27 +78,46 @@
         background: linear-gradient(to right, #0099ff 10%, #ff0066 90%);
         background-position: center;
         text-align: center;
-        padding: 0px;
-        font-family:Impact;
-        }
+        padding: 10px;
+        font-family:serif;
+        font-weight: 500;
+        font-style: inherit;
+        font-size: 100%;
+        font:100;
+
+    }
 #Fuel_list{
             border-radius: 24px;
             width: 275px;
             height: 60px;
-            font-size: 17px;
+            font-size: 24px;
             text-align: center;
             margin: 30px 0px 15px 0px;
-            font-family: cursive;
+            font-family: Times New Roman;
             font:100;
             color:black;   
             letter-spacing: 0.5px;
             outline: none;
             padding: 15px;
             box-sizing: border-box;
-            
+}
+#First{
+            border-radius: 24px;
+            width: 275px;
+            height: 60px;
+            font-size: 20px;
+            text-align: center;
+            margin: 30px 0px 15px 0px;
+            font-family: Times New Roman;
+            font:100;
+            color:black;   
+            letter-spacing: 0.5px;
+            outline: none;
+            padding: 15px;
+            box-sizing: border-box;
 }
         
-#a{
+#Fuel_type a{
             text-decoration: none;
         }
 #Fuel_type a:hover{
