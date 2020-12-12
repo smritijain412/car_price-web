@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Result</title>
+</head>
+{% block content %}
+<body>
+    
+  <form action="{{ url_for('dashboard')}}" method="GET">
+
+<script type='text/javascript' src='https://prod-apnortheast-a.online.tableau.com/javascripts/api/viz_v1.js'></script>
+<div class='tableauPlaceholder' style='width: 1500px; height: 800px;'>
+<object class='tableauViz' width='1500' height='800' style='display:none;'>
+<param name='host_url' value='https%3A%2F%2Fprod-apnortheast-a.online.tableau.com%2F' /> 
+<param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;analyticsdatabuisness' />
+<param name='name' value='smritijain&#47;Dashboard1&#47;dinesh.19mcal035@jecrcu.edu.in&#47;smriti' />
+<param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='display_count' value='n' />
+<param name='origin' value='viz_share_link' />
+<param name='showAppBanner' value='false' /></object></div>
+{% endblock %}
+
+    </body>
+    </html>
