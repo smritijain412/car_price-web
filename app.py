@@ -15,25 +15,19 @@ def dashboard():
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
-#1
         Year = int(request.form['Year'])                
-#2
         Volume=float(request.form['Volume'])
-    #3
         Mileage=float(request.form['Mileage'])
-#4
         Fuel=request.form['Fuel']
         if(Fuel=='Petrol'):
                 Fuel=0
         else:
             Fuel=1
-    #5
         Transmission=request.form['Transmission']
         if(Transmission=='Mechanic'):
             Transmission=0
         else:
             Transmission=1
-
         prediction=model.predict([[Year,Mileage,Fuel,Volume,Transmission]])
         output=round(prediction[0])
         if output<0:
