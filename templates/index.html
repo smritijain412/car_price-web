@@ -16,39 +16,45 @@
     <div>
         <form action="{{ url_for('predict')}}" method="post">
 
-        <input id="Fuel_list" name="Year" required="required"  placeholder="YEAR" type="number" > 
+        <input id="Fuel_list" name="Year" required="required"  placeholder="Year" type="number" > 
         </div>
         <div>
-            <input id="Fuel_list" name="Mileage" required='required' placeholder="mileage"  > 
+            <input id="Fuel_list" name="Mileage" required='required' placeholder="Mileage"  > 
 
         </div>
         <div>
-        <input id="Fuel_list" name="Volume" required="required" placeholder="volume"  > 
+        <input id="Fuel_list" name="Volume" required="required" placeholder="Volume"  > 
         </div>
         
         <div>
-        <select name="Fuel_Type" id="Fuel_list" required="required">
-                    <option value="Fuel_Type">What Is the Fuel type?</option> 
+        <select id="Fuel_list" name="Fuel" required="required">
+                    <option value="Fuel">Fuel </option> 
                     <option value="Petrol">Petrol</option>
                     <option value="Diesel">Diesel</option>
                 </select>
         </div>
     <div>
-            <select name="Transmission_Mannual" id="Fuel_list" required="required">
-                <option value="Transmission">Transmission Type</option>
+            <select id="Fuel_list" name="Transmission" required="required">
+                <option value="Transmission">Transmission</option>
                 <option value="Mechanic">Mechanics Car</option>
                 <option value="Automatic">Automatic Car</option>
             </select>
             </div>
             <div>
-            <button id="First" type="submit" ><span>Calculate the Selling Price</span></button>
+            <button id="Fuel_list" type="submit" ><span>Calculate Selling Price</span></button>
             </div>
             <div>
-                <button id="Fuel_list" type="submit"><a href="https://prod-apnortheast-a.online.tableau.com/t/analyticsdatabuisness/views/smritijain/Dashboard1/dinesh.19mcal035@jecrcu.edu.in/smriti?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link">Dashboard</a></button>
-
+                <nav>
+                <button id="Fuel_list" type="submit"> 
+                <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                <!--
+               <a href="file:///C:/Users/sj/Desktop/car_price-web/templates/dashboard.html"><span>Dashboard</span></button></div></a>
+                -->
+            </nav>
             </div>
         </div>
 </body>
+
 </html>
 </form>
 </div>
@@ -61,16 +67,13 @@
 .container{
     background-color:#ffffff;
     width: auto;
-    
-    
     text-align: center;
     align-items: center;
     padding: 42px 55px 45px 55px;
     display: inline-block;
     margin: auto;
     overflow: hidden;
-    
-    border-radius: 10px;
+    border-radius: 20px;
 
 }
        
@@ -78,52 +81,33 @@
         background: linear-gradient(to right, #0099ff 10%, #ff0066 90%);
         background-position: center;
         text-align: center;
-        padding: 10px;
-        font-family:serif;
-        font-weight: 500;
-        font-style: inherit;
-        font-size: 100%;
-        font:100;
+        padding: 40px;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 190%;
 
     }
 #Fuel_list{
-            border-radius: 24px;
-            width: 275px;
-            height: 60px;
-            font-size: 24px;
+            border-radius: 28px;
+            width: 90%;
+            height: 68px;
+            font-size: 25px;
             text-align: center;
             margin: 30px 0px 15px 0px;
-            font-family: Times New Roman;
-            font:100;
+            font-family:  Georgia;
             color:black;   
             letter-spacing: 0.5px;
-            outline: none;
-            padding: 15px;
+            padding: 16px;
             box-sizing: border-box;
 }
-#First{
-            border-radius: 24px;
-            width: 275px;
-            height: 60px;
-            font-size: 20px;
-            text-align: center;
-            margin: 30px 0px 15px 0px;
-            font-family: Times New Roman;
-            font:100;
-            color:black;   
-            letter-spacing: 0.5px;
-            outline: none;
-            padding: 15px;
-            box-sizing: border-box;
+
+#Fuel_list a{
+    text-decoration: none;
 }
         
-#Fuel_type a{
-            text-decoration: none;
-        }
-#Fuel_type a:hover{
+#Fuel_list a:hover{
             color: #ffffff;
-        }
-#Fuel_type span:hover{
+}
+#Fuel_list span:hover{
             color:lightslategrey;
         }
         
